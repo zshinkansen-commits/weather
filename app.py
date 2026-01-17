@@ -11,7 +11,7 @@ OPENMETEO_WEATHER = httpsapi.open-meteo.comv1forecast
 OPENMETEO_GEOCODE = httpsgeocoding-api.open-meteo.comv1search
 
 # --- 1. The Mapper (Expanded to match your Java Switch Case) ---
-get_weather_info(code: int, is_night: bool):
+def get_weather_info(code: int, is_night: bool):
     Returns (IconID, WeatherText) based on your Java Switch Case.
     # Mapping WMO Code - (DayIcon, NightIcon, Text)
     wmo_map = {
@@ -133,5 +133,6 @@ response
 
 if __name__ == __main__
     app.run(host=0.0.0.0, port=80)
+
 
 
