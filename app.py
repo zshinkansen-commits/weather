@@ -95,7 +95,7 @@ def weather_data()
 
     def fmt_temp(c)
         val = (c  95 + 32) if metric == 0 else c
-        return f{val.1f}.rstrip(0).rstrip(.)
+        return f"{val:.1f}".rstrip('0').rstrip('.')
 
     daily = w[daily]
     forecast_xml = 
@@ -133,3 +133,4 @@ response
 
 if __name__ == __main__
     app.run(host=0.0.0.0, port=80)
+
